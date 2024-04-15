@@ -31,16 +31,16 @@ locals {
   pi_string_20_dp = "${local.pi_text} ${format("%.20f", var.pi)}"
   pi_string_2_dp  = "${local.pi_text} ${format("%.2f", var.pi)}"
 
-  # e: Ternary with greater than
-  is_pi_greater_than_3     = var.pi > 3
-  pi_greater_than_3_string = local.is_pi_greater_than_3 ? "yes it is!" : "no it is not..."
+  # e: Ternary with and operator
+  is_pi_greater_than_3_and_less_than_5     = var.pi > 3 && var.pi < 5
+  pi_greater_than_3_and_less_than_5_string = local.is_pi_greater_than_3_and_less_than_5 ? "yes it is!" : "no it is not..."
 
   demo_02 = {
-    a_pi_string                = local.pi_string
-    b_many_pi_string           = local.many_pi_string
-    c_pi_string_20_dp          = local.pi_string_20_dp
-    d_pi_string_2_dp           = local.pi_string_2_dp
-    e_pi_greater_than_3_string = local.pi_greater_than_3_string
+    a_pi_string                                = local.pi_string
+    b_many_pi_string                           = local.many_pi_string
+    c_pi_string_20_dp                          = local.pi_string_20_dp
+    d_pi_string_2_dp                           = local.pi_string_2_dp
+    e_pi_greater_than_3_and_less_than_5_string = local.pi_greater_than_3_and_less_than_5_string
   }
 }
 
