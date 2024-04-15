@@ -66,9 +66,10 @@ locals {
   keys   = keys(local.my_number_map)
   values = values(local.my_number_map)
 
+  # e: Index function
   key_index_of_c = index(local.keys, "c")
 
-  # e: Map for function
+  # f: Map for function
   my_number_map_2 = { for key, value in local.my_number_map : key => value * 2 }
 
   demo_03 = {
