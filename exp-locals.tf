@@ -66,6 +66,8 @@ locals {
   keys   = keys(local.my_number_map)
   values = values(local.my_number_map)
 
+  key_index_of_c = index(local.keys, "c")
+
   # e: Map for function
   my_number_map_2 = { for key, value in local.my_number_map : key => value * 2 }
 
@@ -74,6 +76,7 @@ locals {
     b_split_string    = local.split_string
     c_keys            = local.keys
     d_values          = local.values
-    e_my_number_map_2 = local.my_number_map_2
+    e_key_index_of_c  = local.key_index_of_c
+    f_my_number_map_2 = local.my_number_map_2
   }
 }
