@@ -5,7 +5,7 @@ subnets_and_sizes = {
   "b" = 23
   "c" = 28
   "d" = 27
-  "e" = 28
+  "e" = 29
 }
 location = "uksouth"
 postfix  = "super-demo"
