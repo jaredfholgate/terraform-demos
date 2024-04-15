@@ -1,11 +1,12 @@
 address_space_start_ip = "10.0.0.0"
 address_space_size     = 16
 subnets_and_sizes = {
-  "a" = 24
-  "b" = 23
-  "c" = 28
-  "d" = 27
-  "e" = 29
+  "alpha" = 24
+  "bravo" = 23
+  "charlie" = 28
+  "delta" = 27
+  "echo" = 29
+  "foxtrot" = 24
 }
 location = "uksouth"
 postfix  = "super-demo"
