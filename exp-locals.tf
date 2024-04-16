@@ -6,14 +6,8 @@ locals {
   # b: Ternary operator
   ternary_result = var.hello == "hello" ? "yes" : "no"
 
-  # c: String concatenation
-  demo_concatenated = "${var.hello}-${var.world} ::: Is Hello: ${local.is_hello} ::: Is Hello Ternary: ${local.ternary_result}"
-
-  demo_01 = {
-    a_is_hello          = local.is_hello
-    b_ternary_result    = local.ternary_result
-    c_demo_concatenated = local.demo_concatenated
-  }
+  # c: String interpolation
+  demo_concatenated = "${var.hello}-${var.world} ::: Is Hello: ${local.is_hello} ::: Is Hello Ternary: ${local.ternary_result} 😀"
 }
 
 # Demo 2
@@ -34,14 +28,6 @@ locals {
   # e: Ternary with and operator
   is_pi_greater_than_3_and_less_than_5     = var.pi > 3 && var.pi < 5
   pi_greater_than_3_and_less_than_5_string = local.is_pi_greater_than_3_and_less_than_5 ? "yes it is!" : "no it is not..."
-
-  demo_02 = {
-    a_pi_string                                = local.pi_string
-    b_many_pi_string                           = local.many_pi_string
-    c_pi_string_20_dp                          = local.pi_string_20_dp
-    d_pi_string_2_dp                           = local.pi_string_2_dp
-    e_pi_greater_than_3_and_less_than_5_string = local.pi_greater_than_3_and_less_than_5_string
-  }
 }
 
 # Demo 3
@@ -71,6 +57,22 @@ locals {
 
   # f: Map for function
   my_number_map_2 = { for key, value in local.my_number_map : key => value * 2 }
+}
+
+locals {
+  demo_01 = {
+    a_is_hello          = local.is_hello
+    b_ternary_result    = local.ternary_result
+    c_demo_concatenated = local.demo_concatenated
+  }
+
+  demo_02 = {
+    a_pi_string                                = local.pi_string
+    b_many_pi_string                           = local.many_pi_string
+    c_pi_string_20_dp                          = local.pi_string_20_dp
+    d_pi_string_2_dp                           = local.pi_string_2_dp
+    e_pi_greater_than_3_and_less_than_5_string = local.pi_greater_than_3_and_less_than_5_string
+  }
 
   demo_03 = {
     a_joined_array    = local.joined_array
